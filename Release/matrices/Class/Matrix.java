@@ -56,13 +56,15 @@ public class Matrix {
 		do {
 			printMessage("");
 			printMessage("================================================");
+			printMessage("     CALCULAR LA INVERSA DE UNA MATRIX N X N    ");
+			printMessage("================================================");
 			printMessage("");
-			printMessage("Seleccione alguna de las opciones disponibles:");
+			printMessage("Introduzca la matriz y con la opción [2] calcule su inversa:");
 			printMessage("1.- Introducir la Matriz ");
 			printMessage("2.- Calcular inversa de la matriz ");
 			printMessage("0.- SALIR ");
 			printMessage("");
-			printMessage("================================================");
+			printMessage("________________________________________________");
 			printMessage("");
 
 			optionUser = Integer.parseInt(inputUser.readLine());

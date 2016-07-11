@@ -20,7 +20,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.awt.Component;
 import javax.swing.JSeparator;
-import java.awt.FlowLayout;
 
 public class CalculateMatrix {
 
@@ -69,7 +68,6 @@ public class CalculateMatrix {
 
 		JPanel panelContent = new JPanel();
 		final JPanel panelMatrix = new JPanel();
-		FlowLayout flowLayout = (FlowLayout) panelMatrix.getLayout();
 		final JPanel panelResult = new JPanel();
 		final ArrayList<JTextField> listFields = new ArrayList<JTextField>();
 		panelMatrix.setBorder(null);
@@ -126,7 +124,6 @@ public class CalculateMatrix {
 				int sizeInput = Integer.parseInt(textField.getText());
 				int indexRow = 0;
 				int indexColumn = 0;
-				Matrix moduleMatrix = new Matrix();
 				Matrix.setMatrixObject(sizeInput, sizeInput);
 
 				for (Component c : allTextfields) {
