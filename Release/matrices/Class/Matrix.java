@@ -8,19 +8,19 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
 /**
- * @author
+ * @author Javier Orlando Ladino
  *
  */
 public class Matrix {
 	/**
 	 * Matrix of user
 	 */
-	protected static double[][] MatrixObject;
+	public static double[][] MatrixObject;
 
 	/**
 	 * Class than obtains the data
 	 */
-	protected static BufferedReader inputUser = new BufferedReader(new InputStreamReader(System.in));
+	public static BufferedReader inputUser = new BufferedReader(new InputStreamReader(System.in));
 
 	/**
 	 * Method set of MatrixObject
@@ -169,7 +169,7 @@ public class Matrix {
 	 * @throws IOException
 	 * @throws NullPointerException
 	 */
-	private static double[][] getReverseMatrix() throws NullPointerException, IOException {
+	public static double[][] getReverseMatrix() throws NullPointerException, IOException {
 		if (Matrix.MatrixObject != null) {
 			if (getDeterminant(Matrix.MatrixObject) != 0) {
 				// Determinant of the matrix
@@ -195,7 +195,7 @@ public class Matrix {
 	}
 
 	/**
-	 * Gets the adjoin matrix (Matriz adjunta)
+	 * Gets the adjoin matrix
 	 * @param matrix
 	 * @return
 	 * @throws IOException
@@ -209,7 +209,7 @@ public class Matrix {
 	}
 
 	/**
-	 * Gets the cofactor matrix (Matriz de cofactores)
+	 * Gets the cofactor matrix
 	 * @param matrix
 	 * @return
 	 */
@@ -234,14 +234,14 @@ public class Matrix {
 				}
 
 				determinantValue = getDeterminant(determinant);
-				newMatrix[i][j] = determinantValue * (double) Math.pow(-1, i + j + 2);
+				newMatrix[i][j] = determinantValue * Math.pow(-1, i + j + 2);
 			}
 		}
 		return newMatrix;
 	}
 
 	/**
-	 * Gets the tranposed matrix (Matrix transpuesta)
+	 * Gets the tranposed matrix
 	 * @param matrix
 	 * @param newMatrix
 	 * @param numberRows
@@ -302,7 +302,7 @@ public class Matrix {
 	}
 
 	/**
-	 * Gets determinant matrix (Determinante de una matriz)
+	 * Gets determinant matrix
 	 * @param matrix
 	 * @return
 	 */
